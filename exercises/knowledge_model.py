@@ -13,5 +13,13 @@ class Knowledge(Base):
 	# The third column will be a string representing the 
 	# topic of the article. The last column will be
 	# an integer, representing your rating of the article.
+	__tablename__="subject"
+	article_id=Column(Integer,primary_key=True)
+	name=Column(String)
+	topic=Column(String)
+	rating=Column(Integer)
+	def __repr__(self):
+		return ("article name: {}\n""article topic: {} \n""article rating: {}").format(self.name,self.topic,self.rating)
 
-	pass
+weather=Knowledge(name="rainbow",topic="weather",rating=9)
+print(weather)

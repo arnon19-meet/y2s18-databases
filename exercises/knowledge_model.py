@@ -21,5 +21,7 @@ class Knowledge(Base):
 	def __repr__(self):
 		return ("article name: {}\n""article topic: {} \n""article rating: {}").format(self.name,self.topic,self.rating)
 
+
+black_holes=Knowledge(name="black holes",topic="astronomy", rating= 10)
 weather=Knowledge(name="rainbow",topic="weather",rating=9)
-print(weather)
+
